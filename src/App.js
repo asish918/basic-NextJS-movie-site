@@ -5,6 +5,17 @@ import { useEffect } from "react";
 
 const API_URL = 'http://omdbapi.com?apikey=ca1132f'
 
+const samplemovie = {
+
+    "Title": "Spiderman",
+    "Year": "2010",
+    "imdbID": "tt1785572",
+    "Type": "movie",
+    "Poster": "N/A"
+
+
+}
+
 const App = () => {
 
     const searchMovies = async (title) => {
@@ -15,7 +26,7 @@ const App = () => {
     }
 
     useEffect(() => {
-        searchMovies('ironman');
+        searchMovies('Spiderman');
     }, []);
 
     return (
@@ -23,20 +34,34 @@ const App = () => {
             <h1>BingeLand</h1>
 
             <div className="search">
-                <input 
+                <input
                     placeholder="Search for movies"
                     value="Spiderman"
-                    onChange={() => {}}
+                    onChange={() => { }}
                 />
-                <img 
+                <img
                     src=""
                     alt="Search Icon"
-                    onCLick={() => {}}
+                    onCLick={() => { }}
                 />
             </div>
 
             <div className="container">
-                
+                <div className="movie">
+                    <div>
+                        <p>{samplemovie.Year}</p>
+                    </div>
+
+                    <div>
+                        <img src={samplemovie.Poster !== 'N/A' ? samplemovie.Poster : 'https://via.placeholder.com/400'} alt={samplemovie.Title} 
+                            />
+                    </div>
+
+                    <div>
+                        <span>{samplemovie.Type}</span>
+                        <h3>{samplemovie.Title}</h3>
+                    </div>
+                </div>
             </div>
         </div>
     )
