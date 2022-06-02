@@ -19,7 +19,26 @@ const App = () => {
     }, []);
 
     return (
-        <h1>Hello World</h1>
+        <div className="app">
+            <h1>BingeLand</h1>
+
+            <div className="search">
+                <input 
+                    placeholder="Search for movies"
+                    value="Spiderman"
+                    onChange={() => {}}
+                />
+                <img 
+                    src=""
+                    alt="Search Icon"
+                    onCLick={() => {}}
+                />
+            </div>
+
+            <div className="container">
+                
+            </div>
+        </div>
     )
 }
 
