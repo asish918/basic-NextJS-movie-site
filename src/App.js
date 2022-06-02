@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
+import MovieCard from "./MovieCard";
 
 // ca1132f
 
@@ -47,21 +48,7 @@ const App = () => {
             </div>
 
             <div className="container">
-                <div className="movie">
-                    <div>
-                        <p>{samplemovie.Year}</p>
-                    </div>
-
-                    <div>
-                        <img src={samplemovie.Poster !== 'N/A' ? samplemovie.Poster : 'https://via.placeholder.com/400'} alt={samplemovie.Title} 
-                            />
-                    </div>
-
-                    <div>
-                        <span>{samplemovie.Type}</span>
-                        <h3>{samplemovie.Title}</h3>
-                    </div>
-                </div>
+                <MovieCard samplemovie={samplemovie}/>
             </div>
         </div>
     )
