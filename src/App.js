@@ -1,21 +1,12 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
+import SearchIcon from './search.svg'
 
 // ca1132f
 
 const API_URL = 'http://omdbapi.com?apikey=ca1132f'
 
-const samplemovie = {
-
-    "Title": "Spiderman",
-    "Year": "2010",
-    "imdbID": "tt1785572",
-    "Type": "movie",
-    "Poster": "N/A"
-
-
-}
 
 const App = () => {
     const [movies, setMovies] = useState([]);
@@ -43,7 +34,7 @@ const App = () => {
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
                 <img
-                    src=""
+                    src={SearchIcon}
                     alt="Search Icon"
                     onCLick={() => searchMovies(searchTerm)}
                 />
