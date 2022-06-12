@@ -1,7 +1,12 @@
-const Results = () => {
+import Thumbnail from "./Thumbnail";
+
+const Results = ({ results }) => {
+    console.log(results);
     return (
         <div>
-            Results
+            {results.map((result) => (
+                <Thumbnail key={result.id} result={result} />
+            ))}
         </div>
     )
 }
