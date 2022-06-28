@@ -1,5 +1,6 @@
 import requests from '../utils/requests'
 import { useRouter } from 'next/router';
+import Viewers from './Viewers';
 
 const Navbar = () => {
 const router = useRouter();
@@ -15,6 +16,10 @@ const router = useRouter();
                 ))}
             </div>
             <div className='absolute top-0 right-0 bg-gradient-to-l from-[#06202a] h-10 w-1/12'>
+            </div>
+
+            <div className='mx-4'>
+            <Viewers />
             </div>
         </nav>
     )
