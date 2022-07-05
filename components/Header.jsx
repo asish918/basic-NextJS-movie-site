@@ -1,5 +1,6 @@
 import Image from "next/image";
 import HeaderItem from './HeaderItem'
+import assets from '../assets/assets'
 import {
     BadgeCheckIcon,
     CollectionIcon,
@@ -21,7 +22,7 @@ const Header = () => {
                 <HeaderItem title='ACCOUNT' Icon={UserIcon} />
             </div>
 
-            <Image src='https://links.papareact.com/ua6' 
+            <Image src={assets.logo}
             className="object-contain"
             width={200}
             height={100}
